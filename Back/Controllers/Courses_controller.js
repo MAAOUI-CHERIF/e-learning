@@ -11,6 +11,12 @@ module.exports= {
             CourseModel.find({type:type}).then((typeCourses)=>{
                 res.send(typeCourses)
             })
+        },
+        getUserCourses(req,res){
+            CourseModel.find({_id : {$in: req.user.blogCourses }}).then((courses)=>{
+                res.send(courses)
+            })
+
         }
     }
 

@@ -7,7 +7,7 @@ router2.route('/all')
     .post()
 
 router2.route('/UserCourses')
-    .post(authenticatedToken)
+    .post(authenticatedToken,getUserCourses)
 
 router2.route('/all/:courseType')
     .get(getCourses)

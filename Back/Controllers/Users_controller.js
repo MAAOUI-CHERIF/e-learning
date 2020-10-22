@@ -62,7 +62,6 @@ module.exports = {
                         const accessToken =  jwt.sign(user.toJSON(),process.env.SECRET_TOKEN_ACCESS)
                         res.json({accessToken: accessToken})
 
-
                     }else{
                         res.send('Mauvais mot de passe')
 

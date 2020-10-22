@@ -2,7 +2,7 @@
 const express = require('express');
 const {getUser, getAllUsers, createUser, deleteUser, updateUser, checkUser } = require('../Controllers/Users_controller');
 const router = express.Router();
-const controller = require('../Controllers/Users_controller')
+
 
 router.route('/all/search/:id')
       .get(getUser)
