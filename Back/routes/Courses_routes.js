@@ -1,13 +1,15 @@
 const express = require('express');
-const { getLolilol, getCourses, getAllCourses } = require('../Controllers/Courses_controller');
+const {getCourses, getAllCourses, getUserCourses } = require('../Controllers/Courses_controller');
 const router2 = express.Router();
-const CoursesController = require('../Controllers/Courses_controller')
-
+const {authenticatedToken} = require('../Controllers/Users_controller')
 router2.route('/all')
     .get(getAllCourses)
     .post()
 
-router2.route('/:courseType')
+router2.route('/UserCourses')
+    .post(authenticatedToken)
+
+router2.route('/all/:courseType')
     .get(getCourses)
 
     module.exports = router2
