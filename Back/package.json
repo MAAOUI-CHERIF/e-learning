@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "nodemon server.js",
+    "startAuth": "nodemon AuthentificationServer.js",
     "dev": "nodemon ./test/connexion_test.js"
   },
   "author": "",

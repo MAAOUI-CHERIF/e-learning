@@ -4,7 +4,7 @@ const {getUser, getAllUsers, createUser, deleteUser, updateUser, checkUser } = r
 const router = express.Router();
 
 
-router.route('/all/search/:id')
+router.route('/all/:id')
       .get(getUser)
       .post(updateUser)
       .delete(deleteUser)

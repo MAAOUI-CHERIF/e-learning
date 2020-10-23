@@ -16,7 +16,8 @@ const UserSchema = new Schema({
     mail:{
         type: String,
         match:[/^[a-zA-Z0-9._-][^<§!:/;,\|()"#`~&=+%µ*$£%>]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/,"C'est pas un mail ça man!"],
-        required: [true, "T'es SMF?(sans mail fixe)"]
+        required: [true, "T'es SMF?(sans mail fixe)"],
+        unique:true
     },
     blogCourses: [{
         type: Schema.Types.ObjectId,
