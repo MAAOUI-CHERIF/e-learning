@@ -18,6 +18,7 @@ module.exports = {
         })
     },
     createUser(req,res){
+        if(req.body.name !== '' && req.body.firstname !== '' && req.body.mail !=='' && req.body.password !== ''){
         const newUser = new UserModel({
             name: req.body.name,
             firstname:req.body.firstname,
@@ -26,11 +27,15 @@ module.exports = {
         })
         newUser.save((err,user)=>{
             if(err){
-                res.send(`Utilisateur non créé. Tous les champs doivent être complétés et  ${err.keyValue.mail} ne doit pas correspondre à compte existant`)
+                res.sendStatus(400)
             }else{
-                res.send(`Utilisateur ${req.body.name} créé`)
+                res.sendStatus(201)
             }
         });
+    }else{
+
+        res.sendStatus(406);
+    }
     },
     deleteUser(req,res){
         const id = req.params.id;
