@@ -29,22 +29,17 @@ module.exports = {
         const courseID = req.params.id;
         if (req.body.blogCourses !== "" && req.body.blogCourses !== null) {
             UserModel.findOne({ mail: req.user.mail }).then((user) => {
-                CourseModel.findOne({ _id: { $in: user.blogCourses } }).then((course) => {
-                    if (course == null) {
-                        user.blogCourses.push(courseID)
-                        user.save()
-                        res.send("Cours ajouté à cet utilisateur, il n'avait pas de cours")
-                    } else if (course._id.equals(courseID)) {
-                        res.send('Cours déjà possédé par cet utilisateur')
-                    } else {
-                        user.blogCourses.push(courseID)
-                        user.save()
-                        res.send('Cours ajouté à cet utilisateur')
-                    }
-                })
-            })
-        }
+                if(!user.blogCourses.includes(courseID)){
+                    user.blogCourses.push(courseID);
+                    user.save();
+                    res.send("Cour ajouté à l'utilisateur")
+                }else{
+                    res.send("Cour déjà possédé")
+                }
+        })
+    }else{
+        res.send("Pas de cours à ajouter")
     }
 }
-
+}
 

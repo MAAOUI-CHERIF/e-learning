@@ -26,7 +26,7 @@ module.exports = {
         })
         newUser.save((err,user)=>{
             if(err){
-                res.send(`Utilisateur non créé. ${err.keyValue.mail} est déjà utilisé pour un compte existant`)
+                res.send(`Utilisateur non créé. Tous les champs doivent être complétés et  ${err.keyValue.mail} ne doit pas correspondre à compte existant`)
             }else{
                 res.send(`Utilisateur ${req.body.name} créé`)
             }

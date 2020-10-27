@@ -9,7 +9,7 @@ router.route('/all/:id')
       .delete(authenticatedToken,deleteUser)
 
 router.route('/all')
-      .get()
+      .get(authenticatedToken,getAllUsers)
       .post(createUser)
 
 router.route('/login')
