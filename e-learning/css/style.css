@@ -1,6 +1,4 @@
-#basic-setup{
 
-}
 
 .big-banner{
   background-image: url('../images/headerbg0.png');
@@ -286,7 +284,7 @@ li{
 	padding:6px 24px;
 	text-decoration:none;
   text-shadow:0px 1px 0px #b23e35;
-  margin-top: 5%;
+  margin-top: 3%;
   justify-content: center;
 }
 
@@ -318,21 +316,24 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 5%;
-  width: 110%;
+  margin-left: 13%;
+  margin-bottom: 3%;
+
 }
 
 .explication1{
-  width: 50%;
+  width: 100%;
+}
+
+.explication2{
+  width: 100%;
 }
 
 .titreformation{
   margin-bottom: 3%;
 }
 
-.explication1{
-  margin-left: ;
-}
+
 .footer{
   background-color: rgb(38,38,38);
   color: white;
@@ -341,19 +342,20 @@ li{
 #footer1{
   display: flex;
   flex-direction: row;
-  width: 100%;
+ 
 }
 
 #footer2{
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
+  margin-left:5%;
+  z-index: ;
 }
 
 .f1{
   display: flex;
   flex-direction: row;
-  width: 300px;
+  width: 280px;
   margin: 3%;
 }
 
@@ -397,9 +399,19 @@ li{
   flex-direction: row;
   width: 88%;
   margin-left: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
 
 #middle1 h3{
   margin-bottom: 3%;
+  width: 70%;
+}
+
+#paragraphe2{
+  width: 50%;
+  margin-right: 13%;
+}
+
+#paragraphe1{
+  width: 80%;
 }
