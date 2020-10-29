@@ -1,0 +1,373 @@
+#basic-setup{
+
+}
+
+.big-banner{
+  background-image: url('../images/headerbg0.png');
+      /* Full height */
+  height: 0%;
+  width: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+li{
+    font-size: 2em;
+}
+
+#header0{
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;	
+}
+
+#nav{
+  margin-top: 10%;
+  margin-left: -13%; 
+ 
+}
+
+#nav a{
+  color: white; 
+}
+
+#nav a:hover{
+  color:yellowgreen;
+  transition: 0.6s;
+  text-decoration: none;
+  font-size: 1.2em; 
+  text-align: center; 
+}
+
+#brochure{
+  padding-top:;
+  margin-left: 5%;
+  font-size: xx-large;
+}
+
+#espaceinscrit{
+  padding-bottom:30% ; 
+}
+
+#queldomaine{
+  padding-top: 3%; 
+  margin-left: 5%;
+}
+.recherche{
+  margin-top: 5%;
+  padding-top: 3%; 
+  margin-left: 5%;
+  font-size: 1.3em;
+}
+
+#textheader{
+  margin-top: 5%;
+}
+
+#bande{
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  width: 100%;
+  margin-top: 5%;	
+  text-align: center;
+}
+
+.inscrit{
+  border: 1px solid white;
+	border-radius: 50%;
+	justify-content: center;
+	color: white;
+	box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+	text-decoration: none;
+  background-color: white;
+  font-size: 2em;
+  margin-right:0%;
+  margin-left: 0%;
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-top:4%;
+  padding-bottom: 4%;
+}
+
+.eleves{
+  border: 1px solid rgb(38,38,38);
+	border-radius: 50%;
+	justify-content: center;
+	color: white;
+	box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+	text-decoration: none;
+  background-color: rgb(38,38,38);
+  font-size: 2em;
+  margin-bottom: 0%;
+  margin-right:3%;
+  margin-left: 0%;
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-top:6%;
+  padding-bottom: 6%;
+}
+
+.data{
+  margin-bottom: 2%;
+}
+
+.qualiopi{
+  padding-top: 10%;
+  margin-bottom: 20%;
+}
+
+.opqf{
+  padding-top: 5%;
+  margin-bottom: 20%;
+}
+
+.cpf2{
+  padding-top: 5%;
+  margin-bottom: 25%; 
+}
+
+.avis{
+  padding-top: 10%;
+  margin-bottom: 20%;
+}
+
+#formez{
+  text-align: center;
+  margin: 3%;
+  color:rgb(38,38,38);
+}
+
+.enfance{
+  border: 1px solid rgb(19,89,91);
+	border-radius: 50%;
+	justify-content: center;
+	color: white;
+	box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+	text-decoration: none;
+  background-color: rgb(19,89,91);
+  font-size: 2em;
+  margin-right:10%;
+  margin-left: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+.animaliers{
+    border: 1px solid rgb(0,177,167);
+    border-radius: 50%;
+    justify-content: center;
+    color: white;
+    box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+    text-decoration: none;
+    background-color: rgb(0,177,167);
+    font-size: 2em;
+    margin-right:0%;
+    margin-left: ;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+.deco{
+    border: 1px solid rgb(19,89,91);
+    border-radius: 50%;
+    justify-content: center;
+    color: white;
+    box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+    text-decoration: none;
+    background-color: rgb(19,89,91);
+    font-size: 2em;
+    margin-right:0%;
+    margin-left: 10%;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 7%;
+    padding-bottom: 5%;
+  }
+
+.finance{
+  border: 1px solid rgb(0,177,167);
+	border-radius: 50%;
+	justify-content: center;
+	color: white;
+	box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+	text-decoration: none;
+  background-color: rgb(0,177,167);
+  font-size: 2em;
+  margin-right:10%;
+  margin-left: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.dev{
+  border: 1px solid rgb(19,89,91);
+  border-radius: 50%;
+  justify-content: center;
+  color: white;
+  box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+  text-decoration: none;
+  background-color: rgb(19,89,91);
+  font-size: 2em;
+  margin-right:0%;
+  margin-left: ;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.social{
+  border: 1px solid rgb(0,177,167);
+  border-radius: 50%;
+  justify-content: center;
+  color: white;
+  box-shadow:0px 0px 10px 1px rgb(70,70,70,10);
+  text-decoration: none;
+  background-color: rgb(0,177,167);
+  font-size: 2em;
+  margin-right:0%;
+  margin-left: 10%;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+.for2{
+  margin-top: 5%;
+}
+
+#formations{
+  background-image: url('../images/bg.png');
+  height: 100%;
+  width: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;  
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+#formations a:hover{
+  color:yellowgreen;
+  transition: 0.6s;
+  text-decoration: none;
+  font-size: 2.2em;
+}
+
+.logo{
+  margin-left: 5%;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+	background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+	background-color:#fc8d83;
+	border-radius:6px;
+	border:1px solid #d83526;
+  display:flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.5em;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+  color: beige;
+  text-decoration: none;
+}
+
+
+.myButton:active {
+	position:;
+	top:1px;
+}
+
+.container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  width: 50%;
+}
+
+.footer{
+  background-color: rgb(38,38,38);
+  color: white;
+}
+
+#footer1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#footer2{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+}
+
+.f1{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin: 3%;
+}
+
+.f1 a{
+  margin-right: 10%;
+}
+
+.f1 p{
+  margin-top: 5%;
+}
+
+.f1 img{
+  margin-right: 10%;
+}
+
+.reference{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  padding-bottom: 3%;
+}
+
+.reference a{
+  margin-left: 5%;
+  color: white;
+}
+
+.reference a:hover{
+  text-decoration: none;
+  color: yellowgreen;
+}
+
+
+#middle{
+  margin-bottom: 10%;
+}
