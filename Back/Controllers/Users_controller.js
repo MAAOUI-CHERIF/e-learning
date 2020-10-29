@@ -7,8 +7,7 @@ const env = require('dotenv').config();
 
 module.exports = {
     getUser(req, res){
-        const id = req.params.id
-        UserModel.findOne({_id :id}).then((user)=>{
+        UserModel.findOne({mail:req.user.mail}).then((user)=>{
             res.send(user)
         })
     },
@@ -66,7 +65,7 @@ module.exports = {
                         res.send('erreur:'+err)
                     }else if(resp){
                         const accessToken =  jwt.sign(user.toJSON(),process.env.SECRET_TOKEN_ACCESS)
-                        res.json({accessToken: accessToken})
+                        res.send({accessToken: accessToken})
                     }else{
                         res.send('Mauvais mot de passe')
                     }
