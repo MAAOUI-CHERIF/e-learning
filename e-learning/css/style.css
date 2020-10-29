@@ -342,7 +342,7 @@ li{
 #footer1{
   display: flex;
   flex-direction: row;
- 
+  width: 80%;
 }
 
 #footer2{
@@ -415,3 +415,32 @@ li{
 #paragraphe1{
   width: 80%;
 }
+
+#forminscrit{
+  margin-bottom: 50%;
+}
+
+#signInForm{
+  margin-top: 70%;
+  background-color:rgba(0,177,167,0.2);
+  background-image: url('../images/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10%;
+  box-shadow: 0px 0px 25px 1px rgb(125,125,125);
+}
+
+#fieldset{
+  width: 500px;
+  height: 700px;
+}
+
+#signInForm legend{
+font-size: 4em;
+}
+
+#signInForm td{
+  font-size: 1.5em;
+  padding: 2%;
+  }
