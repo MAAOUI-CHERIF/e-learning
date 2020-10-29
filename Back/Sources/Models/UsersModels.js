@@ -27,7 +27,6 @@ const UserSchema = new Schema({
         type:String,
         required: true
     }
-
 });
 
 UserSchema.pre('save',async function (next){
@@ -41,6 +40,7 @@ UserSchema.pre('save',async function (next){
         next(error);
     }
 })
+
 
 UserSchema.virtual('countCourses').get(function(){
     return this.blogCourses.length;
