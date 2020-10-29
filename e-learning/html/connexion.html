@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>connexion</title>
+    <script src="../Js/userProfile.mjs"></script>
 </head>
 
 <body id="basic-setup">
@@ -53,15 +54,15 @@
     <section class="login-page">
         <div class="form">
             <fieldset>
-                  <form class="login-form">
+                  <form id="login-form">
                     <input type="text" placeholder="identifiant"/>
                     <input type="password" placeholder="mot de passe"/>
-                    <button>connexion</button>
-                    <p class="message">Vous n'êtes pas encore inscrit? <a href="#">Créez votre compte</a></p>
+                    <button id="login">connexion</button>
+                    <p class="message">Vous n'êtes pas encore inscrit? <a href="/e-learning/html/inscription.html">Créez votre compte</a></p>
                 </form>
-            </fieldset> 
+            </fieldset>
           </div>
-        
+
     </section>
 
     <footer class="footer">
@@ -99,13 +100,14 @@
                 <a href="#">Recrutement</a>
                 <a href="#">Les avis sur Votre Formation</a>
             </div>
-            
+
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
+<script src="/e-learning/Js/requeteLogIn.mjs"></script>
 </html>
