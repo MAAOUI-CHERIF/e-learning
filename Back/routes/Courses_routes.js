@@ -1,11 +1,12 @@
 const express = require('express');
-const {getAllCourses, getUserCourses,deleteUserCourse,addUserCourse, getCoursesByType } = require('../Controllers/Courses_controller');
+
+const {addCourse,getAllCourses, getUserCourses,deleteUserCourse,addUserCourse, getCoursesByType } = require('../Controllers/Courses_controller');
 const router2 = express.Router();
 const {authenticatedToken} = require('../Controllers/Users_controller')
 
 router2.route('/all')
     .get(getAllCourses)
-    .post()
+    .post(addCourse)
 
 router2.route('/UserCourses')
     .get(authenticatedToken,getUserCourses)

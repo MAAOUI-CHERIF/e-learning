@@ -42,7 +42,7 @@ li{
 }
 
 #brochure{
-  padding-top:;
+
   margin-left: 5%;
   font-size: xx-large;
 }
@@ -167,7 +167,7 @@ li{
     background-color: rgb(0,177,167);
     font-size: 2em;
     margin-right:0%;
-    margin-left: ;
+    
     padding-right: 10%;
     padding-left: 10%;
     padding-top: 5%;
@@ -218,7 +218,7 @@ li{
   background-color: rgb(19,89,91);
   font-size: 2em;
   margin-right:0%;
-  margin-left: ;
+  
   padding-right: 10%;
   padding-left: 10%;
   padding-top: 5%;
@@ -297,7 +297,7 @@ li{
 
 
 .myButton:active {
-	position:;
+
 	top:1px;
 }
 
@@ -349,7 +349,7 @@ li{
   display: flex;
   flex-direction: row;
   margin-left:5%;
-  z-index: ;
+
 }
 
 .f1{
@@ -444,3 +444,27 @@ font-size: 4em;
   font-size: 1.5em;
   padding: 2%;
   }
+
+.containerPerso{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width:80%;
+  height:auto;
+  margin:2.5% 0% 5% 10%;
+  padding: 2%;
+  border: 2px groove rgba(28,110,164,0.15);
+  border-radius: 40px 
+} 
+
+.courseContent {
+  padding: 0 18px;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition:  0.2s ease-out;
+}
+.btn{
+  margin:1%;
+}

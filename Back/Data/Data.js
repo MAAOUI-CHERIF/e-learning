@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise;
 
 
 
-mongoose.connect(`${ process.env.SECRET_CONNEXION_STRING}`,{useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect(`mongodb+srv://Mathieu:Su04za08ku90@e-learning.c1izm.mongodb.net/e-learning?retryWrites=true&w=majority`,{useNewUrlParser: true,useUnifiedTopology: true })
 
 
 mongoose.connection.once('open',()=>{

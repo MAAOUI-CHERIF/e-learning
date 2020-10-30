@@ -37,34 +37,74 @@ module.exports = {
     }
     },
     deleteUser(req,res){
-        const id = req.params.id;
-        UserModel.findOne({_id:id}).then((user)=>{
-            res.send(`Utilisateur ${user.name} supprimé`)
-            user.remove();
+        UserModel.findOne({mail:req.user.mail}).then((user)=>{
+            if(user == null){
+                res.sendStatus(401)
+            }else{
+                user.remove((err,user)=>{
+                    if(err){
+                        res.sendStatus(500)
+                    }else{
+                        res.sendStatus(201)
+                    }
+                })
+            }
         })
     },
-    updateUser(req,res){
-        const id = req.params.id;
-        UserModel.findOne({_id :id}).then((user)=>{
-            user.set('name', req.body.name);
-            user.set('firstname', req.body.firstname);
-            user.set('mail', req.body.mail);
-            user.set('password',req.body.password)
-            user.save();
-            res.end('Utilisateur mis à jour')
+    updateUserEmail(req,res){
+
+        UserModel.findOne({mail:req.user.mail }).then((user)=>{
+            if(user == null){
+                res.sendStatus(401)
+            }else if(req.body.mail !== req.user.mail){
+                res.sendStatus(403)
+            }else{
+                user.set('mail', req.body.newMail);
+            }
+            user.save((err,user)=>{
+                if(err){
+                    console.log(err)
+                    res.sendStatus(500)
+                }else{
+                    res.sendStatus(201)
+                }
+            });
         })
     },
+    updateUserPassword(req,res){
+        UserModel.findOne({mail:req.user.mail }).then(async(user)=>{
+            
+            if(user == null){
+                res.sendStatus(401)
+            }else{
+                await bcrypt.compare(req.body.mail, user.password,(err,resp)=>{
+                    if(err){
+                        res.sendStatus(403)
+                    }else{
+                        user.set('password', req.body.password);
+                        user.save((err,user)=>{
+                            if(err){
+                                res.sendStatus(500)
+                            }else{
+                                res.sendStatus(201)
+                            }
+                        })
+                    }
+                })
+            
+            }
+        })},
      checkUser(req,res){
         UserModel.findOne({mail: req.body.mail}).then(async(user)=>{
 
            if(user == null){
-              return res.sendStatus(400).send("Pas d'utilisateur avec cet email")
+               res.sendStatus(400).send("Pas d'utilisateur avec cet email")
            }else{
                 await bcrypt.compare(req.body.password, user.password,(err,resp)=>{
                     if(err){
                         res.send('erreur:'+err)
                     }else if(resp){
-                        const accessToken =  jwt.sign(user.toJSON(),process.env.SECRET_TOKEN_ACCESS)
+                        const accessToken =  jwt.sign(user.toJSON(),"process.env.SECRET_TOKEN_ACCESS")
                         res.send({accessToken: accessToken})
                     }else{
                         res.send('Mauvais mot de passe')
@@ -79,8 +119,9 @@ module.exports = {
         if(token == null || token == "undefined"){
           return  res.sendStatus(401)
         }
-        jwt.verify(token,process.env.SECRET_TOKEN_ACCESS,(err,decoded)=>{
+        jwt.verify(token,'process.env.SECRET_TOKEN_ACCESS',(err,decoded)=>{
             if(err){
+                console.log(err)
                 return res.sendStatus(403)
             }else{
                 req.user = decoded;

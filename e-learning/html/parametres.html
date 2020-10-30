@@ -43,16 +43,16 @@
                 </form>
             </div>
             <div id="espaceinscrit">
-                <a class="eleves text-white font-weight-bold float-md-right" href="#">Espace élèves</a>
-                <a class="inscrit text-danger font-weight-bold float-md-right" href="#">S'inscrire</a>
+                <a class="eleves text-white font-weight-bold float-md-right" id="userProfile" href="">Espace élèves</a>
+                <a class="inscrit text-danger font-weight-bold float-md-right" href="./inscription.html">S'inscrire</a>
             </div>
         </div>
     </header>
 
 
     <section>
-        <form>
-            <fieldset>
+        <form name="newMailForm" >
+ 
                 <legend>Votre email</legend>
 
                 <table>
@@ -66,16 +66,16 @@
                     </tr>
                                        
                 </table>
-                <button>Envoyer</button>
-            </fieldset>
+                <button id='newMailButton'>Envoyer</button>
+            
         </form>
     </section>
 
     
 
     <section>
-        <form>
-            <fieldset>
+        <form name='newPassForm'>
+         
                 <legend>Changer votre mot de passe</legend>
 
                 <table>
@@ -92,15 +92,15 @@
                         <td><input type="password" placeholder="confirmez votre mot de passe"/></td>
                     </tr>                   
                 </table>
-                <button>Envoyer</button>
-            </fieldset>
+                <button id="newPassButton">Envoyer</button>
+         
         </form>
     </section>
 
     <section>
         <fieldset>
             <legend>Supprimez votre compte</legend>
-            <a href="#">Je veux supprimer mon compte</a>
+            <button class="btn btn-danger" id="deleteAccount">Je veux supprimer mon compte</button>
         </fieldset>
     </section>
 
@@ -143,4 +143,6 @@
         </div>
     </footer>
 </body>
+<script type="module" src="../Js/userProfile.mjs"></script>
+<script type="module" src="../Js/parameters.mjs"></script>
 </html>

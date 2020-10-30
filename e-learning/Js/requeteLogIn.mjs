@@ -24,7 +24,7 @@ loginButton.addEventListener('click',async(e)=>{
         alert("Utilisateur non trouvé")
     }else{
         const data = await res.json() //accessToken
-        const token = data.accessToken
+        const token = data.accessToken;
         sessionStorage.setItem('token',token)
         window.location.href = './index.html'
         alert("Bienvenue !")

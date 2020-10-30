@@ -25,6 +25,26 @@ module.exports = {
         UserModel.updateOne({ mail: req.user.mail }, { $pull: { blogCourses: courseID } }).then()
         res.send('Cours supprimé pour cet utilisateur')
     },
+    addCourse(req,res){
+        if(req.body.name !== '' && req.body.difficulty !== '' && req.body.type !== '')
+        {
+            const newCourse = new CourseModel({
+                name: req.body.name,
+                difficulty : req.body.difficulty,
+                summary:req.body.summary,
+                description: req.body.description,
+                content: req.body.content,
+                type: req.body.type
+            })
+            newCourse.save((err,course)=>{
+                if(err){
+                    res.sendStatus(400)
+                }else{
+                    res.sendStatus(201)
+                }
+            })
+        }
+    },
     addUserCourse(req, res) {
         const courseID = req.params.id;
         if (req.body.blogCourses !== "" && req.body.blogCourses !== null) {
@@ -32,9 +52,9 @@ module.exports = {
                 if(!user.blogCourses.includes(courseID)){
                     user.blogCourses.push(courseID);
                     user.save();
-                    res.send("Cour ajouté à l'utilisateur")
+                    res.sendStatus(201)
                 }else{
-                    res.send("Cour déjà possédé")
+                    res.sendStatus(406)
                 }
         })
     }else{

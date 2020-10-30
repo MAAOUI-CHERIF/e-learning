@@ -1,15 +1,19 @@
 const express = require('express');
-const {getUser, getAllUsers, createUser, deleteUser, updateUser, checkUser,authenticatedToken } = require('../Controllers/Users_controller');
+const {getUser, getAllUsers, createUser, deleteUser, updateUserEmail,updateUserPassword, checkUser,authenticatedToken } = require('../Controllers/Users_controller');
+
 const router = express.Router();
 
 
-router.route('/all/:id')
+router.route('/modif')
       .get(authenticatedToken,getUser)
-      .post(authenticatedToken,updateUser)
+      .post(authenticatedToken,updateUserEmail)
       .delete(authenticatedToken,deleteUser)
 
+router.route('/modifPass')
+      .post(authenticatedToken,updateUserPassword)
+
 router.route('/all')
-      .get(authenticatedToken,getAllUsers)
+      .get()
       .post(createUser)
 
 router.route('/login')
